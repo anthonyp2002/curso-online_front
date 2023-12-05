@@ -1,0 +1,17 @@
+<h1></h1>
+<button mat-raised-button color="primary" (click)="listCursosTomados()">Cursos Tomados</button>
+<h1></h1>
+<div class="course-list">
+  <mat-card *ngFor="let course of courses">
+    <mat-card-header>
+      <mat-card-title>{{ course.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ course.descripccion }}</p>
+      <p>{{ course.price }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="registerForCourse(course)">Registrarse</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
